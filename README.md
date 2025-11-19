@@ -1,8 +1,65 @@
-# Task Manager CLI Application
+# Task Manager Application
 
-A simple yet robust command-line interface (CLI) application for managing personal tasks. This Python application allows users to add, view, delete tasks, and quit the application with comprehensive error handling and user-friendly interactions.
+A task management application available in two versions:
+1. **CLI Version** - Python command-line interface
+2. **Web Version** - Modern web application deployable to Netlify
 
-## 📋 Features
+## 🌐 Web Version (Netlify Deployment)
+
+The web version is a modern, responsive task manager that runs entirely in the browser with local storage persistence.
+
+### Features
+- **Modern UI**: Beautiful gradient design with smooth animations
+- **Local Storage**: Tasks persist across browser sessions
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
+- **Real-time Updates**: Instant task additions and deletions
+- **Input Validation**: Prevents empty, duplicate, or overly long tasks
+- **User Feedback**: Success and error messages for all operations
+
+### Live Demo
+Visit the deployed application at: [Your Netlify URL will appear here after deployment]
+
+### Deployment to Netlify
+
+#### Option 1: Deploy via Netlify UI (Recommended)
+1. Fork or clone this repository
+2. Log in to [Netlify](https://www.netlify.com/)
+3. Click "Add new site" → "Import an existing project"
+4. Connect your GitHub account and select this repository
+5. Netlify will automatically detect the `netlify.toml` configuration
+6. Click "Deploy site"
+7. Your site will be live at a Netlify URL (e.g., `your-site-name.netlify.app`)
+
+#### Option 2: Deploy via Netlify CLI
+```bash
+# Install Netlify CLI
+npm install -g netlify-cli
+
+# Login to Netlify
+netlify login
+
+# Deploy the site
+netlify deploy --prod
+```
+
+#### Option 3: Deploy via GitHub Integration
+1. Connect your repository to Netlify
+2. Enable automatic deployments
+3. Every push to the main branch will trigger a new deployment
+
+### Configuration
+The `netlify.toml` file includes:
+- Security headers (X-Frame-Options, X-Content-Type-Options, etc.)
+- Performance optimizations (caching for static assets)
+- SPA routing fallback to index.html
+
+### Web Files
+- `index.html` - Main HTML structure
+- `styles.css` - Styling and responsive design
+- `script.js` - Task management logic with localStorage
+- `netlify.toml` - Netlify deployment configuration
+
+## 📋 CLI Version Features
 
 ### Core Functionality
 - **Add Tasks**: Create new tasks with descriptive names
@@ -23,7 +80,7 @@ A simple yet robust command-line interface (CLI) application for managing person
 - **Keyboard Interrupt**: Graceful handling of Ctrl+C interruption
 - **Clean Code Structure**: Well-organized functions with proper documentation
 
-## 🚀 How to Run
+## 🚀 How to Run the CLI Version
 
 ### Prerequisites
 - Python 3.6 or higher installed on your system
